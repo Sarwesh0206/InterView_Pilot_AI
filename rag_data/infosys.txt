@@ -1,0 +1,546 @@
+Infosys Placement Preparation Knowledge Base – RAG-Ready Text
+Document Purpose
+This document is a comprehensive Infosys placement preparation knowledge base designed for retrieval-augmented generation (RAG) systems. It covers the complete Infosys recruitment process, aptitude test structure, coding rounds, technical interview topics, HR interview questions, sample questions with answers, real interview experiences, and preparation strategies. The content is suitable for undergraduate students, fresh graduates, and early-career professionals preparing for Infosys placement drives (InfyTQ, HackWithInfy), internships, and job interviews for roles like Systems Engineer (SE), Specialist Programmer (SP), and Digital Specialist Engineer (DSE).
+
+Each section is self-contained to support independent retrieval, making this guide ideal for interview bots, study assistants, and revision platforms.
+
+Audience and Scope
+Intended for B.Tech, M.Tech, BCA, MCA, B.Sc, M.Sc students (2025–2026 batch).
+
+Suitable for engineering, management, and general placement preparation.
+
+Covers Infosys-specific recruitment processes used in India campus drives.
+
+Focuses on clarity, accuracy, and practical preparation strategies.
+
+Includes sample questions and answers that can be adapted to personal experiences.
+
+Eligibility: Minimum 60% throughout academics (10th, 12th, UG), no active backlogs, CGPA ≥ 6.0.
+
+How to Use This Knowledge Base
+Read each section systematically before placement drives.
+
+Practice aptitude and coding questions daily (10–30 questions/problems).
+
+Review technical topics relevant to your branch (CS fundamentals or domain basics).
+
+Prepare answers for HR questions using templates.
+
+Simulate interview scenarios with friends or record yourself.
+
+For RAG indexing, each major section can be chunked independently.
+
+Infosys Company Overview
+Infosys is a global leader in next-generation digital services and consulting, with over 340,000 employees serving clients in 50+ countries. The company focuses on digital transformation, cloud, automation, AI/ML, cybersecurity, and data analytics. Infosys hires freshers for roles like Systems Engineer (₹3.6 LPA), Specialist Programmer (₹4.8 LPA), and Digital Specialist Engineer (₹7–9 LPA) in India.
+
+Key facts:
+
+Headquartered in Bangalore, India.
+
+Major hubs: Bangalore, Pune, Hyderabad, Chennai, Mumbai, Mysore.
+
+Hires via: InfyTQ ( Systems Engineer), HackWithInfy (SP/DSE), campus drives.
+
+Values: Ethics, sustainability, innovation, client success, inclusive culture.
+
+Infosys Recruitment Process Overview
+The Infosys hiring process for freshers typically includes 3–4 stages over 1–3 weeks:
+
+Registration (InfyTQ / HackWithInfy / Campus Drive)
+
+Online Assessment (Aptitude + Coding)
+
+Technical Interview
+
+HR Interview
+
+Higher roles (SP/DSE) may include an additional Advanced Coding Round or Assessment Task.
+
+Stage 1: Registration (InfyTQ / HackWithInfy)
+Register on Infosys hiring portal or via college placement cell.
+
+InfyTQ: for Systems Engineer role (aptitude-heavy).
+
+HackWithInfy: for Specialist Programmer / DSE roles (coding-heavy, higher salary).
+
+Upload resume, academic records, skills (Java/Python preferred).
+
+Stage 2: Online Assessment
+Duration: 95 minutes (sectional timing, no switching).
+
+Sections:
+
+Quantitative Aptitude (25–30 questions, moderate–hard).
+
+Logical Reasoning (20–25 questions, easy–moderate).
+
+Verbal Ability (15–20 questions, easy).
+
+Coding (1–3 problems, 40–60 mins for coding-focused drives).
+
+Stage 3: Technical Interview
+Duration: 20–40 minutes, one-on-one.
+
+Topics: DSA, DBMS, OS, Networking, OOPs, one programming language (C++/Java/Python).
+
+Non-CS branches: prepare branch basics.
+
+Expect to write code on whiteboard or shared editor.
+
+Stage 4: HR Interview
+Duration: 10–20 minutes.
+
+Topics: Communication, motivation, career goals, salary expectations, behavioral questions.
+
+Use STAR method (Situation, Task, Action, Result) for stories.
+
+Infosys Aptitude Test – Detailed Breakdown
+Test Structure (Online Round)
+Section	Questions	Time	Difficulty
+Quantitative Aptitude	25–30	30–35 min	Moderate–Hard
+Logical Reasoning	20–25	25–30 min	Easy–Moderate
+Verbal Ability	15–20	20–25 min	Easy
+Infosys filters ~80% of applicants in aptitude; quantitative test is benchmark-level.
+
+Quantitative Aptitude Topics
+Percentages
+
+Profit and Loss
+
+Ratio and Proportions
+
+Time and Work
+
+Time, Speed and Distance
+
+Probability
+
+Permutations and Combinations
+
+Simple and Compound Interest
+
+Averages
+
+Number System
+
+Difficulty: moderate to hard.
+
+Sample Quantitative Questions
+Q1. What is 20% of 250?
+Answer: 50
+
+Q2. If CP = Rs. 500, SP = Rs. 600, find profit %.
+Answer: Profit = 100, Profit % = (100/500) × 100 = 20%
+
+Q3. A can do work in 12 days, B in 18 days. Together?
+Answer: Together = (12×18)/(12+18) = 216/30 = 7.2 days
+
+Q4. Car travels 150 km in 3 hours. Speed?
+Answer: 150/3 = 50 km/h
+
+Q5. Sum of first 10 natural numbers?
+Answer: n(n+1)/2 = 10×11/2 = 55
+
+Logical Reasoning Topics
+Data Interpretation
+
+Syllogism
+
+Visual Reasoning
+
+Coding-Decoding
+
+Analogy
+
+Blood Relations
+
+Directions
+
+Puzzles
+
+Seating Arrangements
+
+Difficulty: easy to moderate.
+
+Sample Logical Reasoning Questions
+Q1. Complete series: 2, 4, 8, 16, ?
+Answer: 32 (pattern: ×2)
+
+Q2. If A is B's mother, B is C's father, C is D's brother. How is A related to D?
+Answer: Grandmother
+
+Q3. Series: 3, 6, 11, 18, 27, ?
+Answer: 38 (differences: 3, 5, 7, 9, 11)
+
+Q4. Coding: If CAT = 3120, what is DOG?
+Answer: D=4, O=15, G=7 → 4157
+
+Verbal Ability Topics
+Synonyms and Antonyms
+
+Paragraph Completion
+
+Jumbled Sentences
+
+Sentence Correction
+
+Sentence Completion
+
+Reading Comprehension
+
+Difficulty: easy to moderate.
+
+Sample Verbal Questions
+Q1. Choose the correct sentence:
+a) She go to market
+b) She goes to market
+c) She going to market
+Answer: b) She goes to market
+
+Q2. Synonym of "Brave":
+Answer: Courageous
+
+Q3. Antonym of "Happy":
+Answer: Sad
+
+Infosys Coding Round – Detailed Breakdown
+Test Structure (for InfyTQ / HackWithInfy)
+1–3 coding problems.
+
+Duration: 40–60 minutes (included in 95 mins assessment for some drives).
+
+Platforms: HackerRank, Infosys portal.
+
+Languages: C, C++, Java, Python (Java/Python preferred).
+
+Common Coding Topics
+Arrays (1D, 2D, traversal, max/min, sum)
+
+Strings (palindrome, reverse, count vowels)
+
+Loops and Conditions (factorial, Fibonacci, patterns)
+
+Basic Mathematics (GCD, LCM, prime check)
+
+Sorting and Searching (bubble sort, binary search)
+
+Recursion (basic: factorial, Fibonacci)
+
+Difficulty: easy to moderate for SE, moderate–hard for SP/DSE.
+
+Sample Coding Questions (Infosys SDE Sheet)
+Q1. Reverse an Array
+
+python
+def reverse_array(arr):
+    return arr[::-1]
+Q2. Check if a String is Palindrome
+
+python
+def is_palindrome(s):
+    return s == s[::-1]
+Q3. Find Factorial of a Number
+
+python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+Q4. Print Fibonacci Series up to n Terms
+
+python
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+Q5. Binary Search
+
+python
+def binary_search(arr, x):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+Q6. Combination Sum
+
+python
+def combination_sum(candidates, target):
+    result = []
+    def backtrack(start, path, total):
+        if total == target:
+            result.append(path[:])
+            return
+        if total > target:
+            return
+        for i in range(start, len(candidates)):
+            backtrack(i, path + [candidates[i]], total + candidates[i])
+    backtrack(0, [], 0)
+    return result
+Coding Preparation Strategies
+Practice 10–20 coding problems daily.
+
+Focus on arrays, strings, loops, conditions, basic sorting/searching.
+
+Write clean, commented code with input/output handling.
+
+Test code with multiple inputs (edge cases).
+
+Learn time and space complexity basics (O(n), O(n²)).
+
+Use HackerRank, CodeForces, GeeksforGeeks Infosys SDE sheet.
+
+Infosys Technical Interview – Topics and Questions
+Interview Duration
+20–40 minutes.
+
+One-on-one with a technical recruiter or engineer.
+
+Expect to write code on whiteboard or shared editor.
+
+Common Technical Topics
+Programming Fundamentals (C, C++, Java, Python)
+
+OOP Concepts (Class, Object, Inheritance, Polymorphism, Abstraction, Encapsulation)
+
+DBMS and SQL (Primary/Foreign Key, Joins, Queries)
+
+Operating Systems (Process, Thread, Deadlock, Memory)
+
+Computer Networks (TCP/UDP, IP, HTTP)
+
+Data Structures (Arrays, Lists, Stack, Queue, Basic Trees)
+
+Projects, Internships, Hackathons
+
+Domain Knowledge (CS/IT basics or branch fundamentals)
+
+Sample Technical Questions and Answers
+Q1. What is OOP? Explain its features.
+Answer: OOP (Object-Oriented Programming) is a paradigm based on objects containing data and methods. Features: Class, Object, Inheritance, Polymorphism, Abstraction, Encapsulation.
+
+Q2. What is the difference between SQL and NoSQL?
+Answer: SQL is relational, structured, uses tables. NoSQL is non-relational, unstructured, uses documents, graphs, or key-value stores.
+
+Q3. Explain process and thread.
+Answer: Process is an independent program execution. Thread is a lightweight unit within a process. Multiple threads can exist in one process.
+
+Q4. What is a primary key and foreign key?
+Answer: Primary key uniquely identifies a record. Foreign key links two tables, enforcing referential integrity.
+
+Q5. Write a SQL query to find the second highest salary.
+
+sql
+SELECT MAX(Salary) AS SecondHighest
+FROM Employee
+WHERE Salary < (SELECT MAX(Salary) FROM Employee);
+Q6. What is recursion? Give an example.
+Answer: Recursion is a function calling itself to solve a problem. Example: factorial, Fibonacci.
+
+Q7. Explain TCP and UDP.
+Answer: TCP is connection-oriented, reliable. UDP is connection-less, faster but unreliable.
+
+Q8. What is your favorite project? Explain goal, tech, challenges, results.
+Answer: Example: ML dashboard using Python, Streamlit, FastAPI. Goal: visualize data. Tech: Pandas, Streamlit. Challenge: data cleaning. Result: accurate dashboard.
+
+Q9. What is stack overflow?
+Answer: Stack overflow occurs when a program exceeds stack memory, often due to infinite recursion or large local variables.
+
+Q10. Difference between array and list.
+Answer: Array: fixed size, same type. List: dynamic size, can hold mixed types (in Python).
+
+Infosys HR Interview – Questions and Sample Answers
+Interview Duration
+10–20 minutes.
+
+Focus on communication, motivation, fit, behavioral questions.
+
+Use STAR method for stories (Situation, Task, Action, Result).
+
+Common HR Questions and Answers
+Q1. Tell me about yourself.
+Answer: I am a third-year B.Tech student in Electronics and Instrumentation Engineering. I have strong interest in machine learning, full-stack development, and data analytics. I have worked on coding projects using Python, FastAPI, and Streamlit, and I actively participate in college hackathons.
+
+Q2. What are your strengths and weaknesses?
+Answer: Strengths: problem-solving, quick learning, teamwork. Weakness: I sometimes take time to speak in group discussions. I am improving by practicing active participation.
+
+Q3. Why should we hire you?
+Answer: I have strong technical skills in Python, machine learning, and full-stack development, matching role requirements. I have completed projects using FastAPI and Streamlit, and I am eager to learn and contribute.
+
+Q4. Why do you want to work at Infosys?
+Answer: Infosys works on innovative digital transformation and cloud solutions, aligning with my interest in AI and data. The role offers opportunities to work on real projects and learn from experienced teams.
+
+Q5. What are your career goals?
+Answer: Short-term: gain hands-on experience in ML and data analytics. Long-term: become a data scientist leading impactful projects.
+
+Q6. How do you handle stress?
+Answer: I prioritize tasks, break them into smaller steps, and take short breaks. During a hackathon, I stayed calm and resolved a critical bug under time pressure.
+
+Q7. What are your salary expectations?
+Answer: As a fresher, I focus on learning. I expect ₹3.6–4.8 LPA aligned with role (SE/SP) and open to discussion based on company policies.
+
+Q8. Describe a teamwork experience.
+Answer (STAR): Situation: Group project for data dashboard. Task: I handled data cleaning. Action: Used Pandas, coordinated with teammates. Result: Completed on time, learned collaboration.
+
+Q9. Describe a conflict you resolved.
+Answer (STAR): Situation: Team disagreed on API design. Task: I mediated. Action: Listed pros/cons, chose better option. Result: Conflict resolved, project delivered.
+
+Q10. What do you expect to gain from this position?
+Answer: Hands-on experience in IT services, exposure to real projects, skill growth in coding and analytics, and a path to advance to SP/DSE roles.
+
+Real Infosys Interview Experiences
+Experience 1: B.Tech Student (Systems Engineer)
+The online test had 95 mins: 30 quant, 25 logical, 20 verbal. Coding had 2 problems: reverse array and palindrome check. Technical interview asked about OOP, SQL, process vs thread, and my ML project. HR focused on motivation, strengths, weaknesses, and salary. I cleared all stages and got SE role at ₹3.6 LPA.
+
+Experience 2: MCA Student (Specialist Programmer)
+Aptitude was moderate. Coding had 3 problems: Fibonacci, binary search, combination sum. Technical interview covered OS, networks, DBMS, and recursion. HR asked about teamwork, stress, and career goals. I was selected as SP at ₹4.8 LPA.
+
+Experience 3: HackWithInfy Participant (DSE Track)
+HackWithInfy coding was hard: 3 DSA problems (arrays, strings, recursion). I solved 2 fully. Technical interview was deep on DSA and OOP. HR was friendly. I got DSE role at ₹7–9 LPA.
+
+Preparation Strategies for Infosys Placements
+4-Week Service Company Plan (Systems Engineer / SP)
+Week 1: Aptitude (Quantitative + Logical Reasoning)
+
+Practice 20–30 questions daily.
+
+Focus on percentages, profit-loss, ratio, time-work, speed-distance, probability, permutations.
+
+Use Unstop, GeeksforGeeks Infosys aptitude, PrepInsta.
+
+Learn shortcuts and tricks.
+
+Week 2: Basic Coding (Arrays, Strings, Sorting)
+
+Practice 10–20 problems daily.
+
+Focus on arrays (reverse, max/min), strings (palindrome, reverse), loops (factorial, Fibonacci).
+
+Use HackerRank, GeeksforGeeks Infosys SDE sheet.
+
+Write clean, tested code.
+
+Week 3: CS Theory (OS, DBMS, CN, OOPs)
+
+Revise OOP features, process vs thread, SQL queries, TCP/UDP.
+
+Practice SQL: second highest salary, joins, primary/foreign key.
+
+Use GeeksforGeeks Infosys recruitment page.
+
+Week 4: Mock Tests and Interview Practice
+
+Take 2–3 mock aptitude + coding tests.
+
+Practice HR answers aloud (STAR method).
+
+Simulate technical interview with friend.
+
+Review weak areas.
+
+Key Resources
+Aptitude: Unstop Infosys aptitude, IndiaBIX, GeeksforGeeks.
+
+Coding: HackerRank, CodeForces, GeeksforGeeks Infosys SDE sheet.
+
+CS Theory: GeeksforGeeks OS/DBMS/CN/OOP notes, W Code CS theory.
+
+Mock Tests: PrepInsta Infosys mock, W Code company-specific mocks.
+
+Time Management
+Allocate 2–3 hours daily: 1 hour aptitude, 1 hour coding, 30 mins CS theory, 30 mins HR.
+
+Total prep time: 1–2 months.
+
+Common Mistakes in Infosys Placements
+Neglecting aptitude practice (filters 80% of applicants).
+
+Writing untested coding code (fail edge cases).
+
+Poor project explanation (vague goal/tech/results).
+
+Generic HR answers (no STAR stories).
+
+Not researching Infosys (values, roles, salary).
+
+Lack of confidence in technical interview.
+
+Missing eligibility (GPA < 60%, backlogs).
+
+Salary & Compensation (India)
+Systems Engineer (SE): ₹3.6 LPA.
+
+Specialist Programmer (SP): ₹4.8 LPA.
+
+Digital Specialist Engineer (DSE): ₹7–9 LPA.
+
+Exact compensation depends on role, location, and interview performance.
+
+How to Get an Interview at Infosys
+Apply through Infosys careers page, employee referrals, or campus placement drives.
+
+Register for hiring exams: InfyTQ (SE), HackWithInfy (SP/DSE).
+
+Meet eligibility: 60% throughout, no backlogs, CGPA ≥ 6.0.
+
+Difficulty Level and Prep Timeline
+Overall difficulty: Medium (focus on aptitude, basic coding, CS fundamentals).
+
+Recommended prep time: 1–2 months.
+
+Master aptitude, basic DSA, and CS theory subjects.
+
+RAG-Friendly Chunking Suggestions
+Chunk boundaries for indexing:
+
+Infosys Recruitment Process Stages
+
+Aptitude Test Structure and Topics
+
+Quantitative Aptitude Sample Questions
+
+Logical Reasoning Sample Questions
+
+Verbal Ability Sample Questions
+
+Coding Round Topics and Sample Problems (SDE Sheet)
+
+Technical Interview Topics and Questions
+
+HR Interview Questions and Answers (STAR)
+
+Real Interview Experiences (SE/SP/DSE)
+
+4-Week Preparation Plan
+
+Common Mistakes and Eligibility
+
+Salary and Compensation
+
+Search Tags
+Infosys placement process
+
+Infosys aptitude test questions
+
+Infosys coding round problems
+
+Infosys technical interview topics
+
+Infosys HR interview questions
+
+Infosys interview experiences SE SP DSE
+
+Infosys preparation strategies 4-week
+
+InfyTQ HackWithInfy prep
+
+Infosys rag content
+
+Closing Note
+This Infosys placement preparation knowledge base is designed for quick revision, practice, and structured learning. For Infosys placements, consistent aptitude and coding practice, clear technical explanations (OOP, DBMS, OS, CN), and confident HR communication (STAR method) are key to success. Register for InfyTQ early, focus on Java/Python, and aim for 1–2 months of prep to crack SE/SP/DSE roles.

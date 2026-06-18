@@ -1,0 +1,576 @@
+Wipro Placement Preparation Knowledge Base – RAG-Ready Text
+Document Purpose
+This document is a comprehensive Wipro placement preparation knowledge base designed for retrieval-augmented generation (RAG) systems. It covers the complete Wipro hiring process, aptitude test structure, coding assessment, technical interview topics, HR interview questions, sample questions with answers, real interview experiences, and preparation strategies. The content is suitable for undergraduate students, fresh graduates, and early-career professionals preparing for Wipro placement drives (Wipro NLTH, Turbo, Elite), internships, and job interviews for roles like Project Engineer, Software Engineer, and Analyst.
+
+Each section is self-contained to support independent retrieval, making this guide ideal for interview bots, study assistants, and revision platforms.
+
+Audience and Scope
+Intended for B.E./B.Tech/M.Tech/MCA students (any branch, 2025–2026 batch).
+
+Suitable for engineering, management, and general placement preparation.
+
+Covers Wipro-specific recruitment processes used in India campus drives and off-campus NLTH.
+
+Focuses on clarity, accuracy, and practical preparation strategies.
+
+Includes sample questions and answers that can be adapted to personal experiences.
+
+Eligibility: Minimum 60% throughout academics (10th, 12th, UG/PG), no active backlogs.
+
+How to Use This Knowledge Base
+Read each section systematically before placement drives.
+
+Practice aptitude and coding questions daily (20–30 questions/problems).
+
+Review technical topics relevant to your branch (CS fundamentals or domain basics).
+
+Prepare answers for HR questions using templates.
+
+Simulate interview scenarios with friends or record yourself.
+
+For RAG indexing, each major section can be chunked independently.
+
+Wipro Company Overview
+Wipro Limited is a leading global professional services company with over 249,000 employees serving clients in 50+ countries. The company focuses on digital transformation, cloud, automation, AI/ML, cybersecurity, data analytics, and consulting. Wipro hires freshers for roles like Project Engineer (₹3.5 LPA), Software Engineer (₹4.5 LPA), and Analyst (₹5.5–6.5 LPA) in India.
+
+Key facts:
+
+Headquartered in Bangalore, India.
+
+Major hubs: Bangalore, Pune, Hyderabad, Chennai, Mumbai, Gurgaon, mysore.
+
+Hires via: Wipro NLTH (off-campus), Turbo/Elite drives, campus placement.
+
+Values: Ethics, sustainability, innovation, client success, inclusive culture.
+
+Wipro Hiring Process Overview
+The Wipro recruitment process for freshers typically includes 3–4 stages over 1–3 weeks:
+
+Registration (Wipro NLTH / Turbo / Elite / Campus Drive)
+
+Online Assessment (Aptitude + Technical MCQs + Coding + Essay Writing)
+
+Technical Interview
+
+HR Interview
+
+Some drives combine Technical and HR into one round. The process is hosted on AMCAT (for NLTH) or Superset platform.
+
+Stage 1: Registration (Wipro NLTH / Turbo / Elite)
+Register on Wipro careers portal or via college placement cell.
+
+Wipro NLTH: for Project Engineer role (aptitude-heavy, 60% filter).
+
+Turbo/Elite: for Software Engineer/Analyst roles (coding-heavy, higher salary).
+
+Upload resume, academic records, skills (C/C++/Java/Python preferred).
+
+Stage 2: Online Assessment
+Duration: 128 minutes (no sectional timing, no negative marking).
+
+Sections:
+
+Aptitude Test (48 questions, 48 mins): Quantitative (20), Logical (20), Verbal (8).
+
+Technical MCQs (12 questions, 12 mins): Code output prediction, problem identification, time complexity, OS/DBMS/CN basics.
+
+Coding Test (2 questions, 60 mins): Simple array/string problems (C++/Java only).
+
+Essay Writing (8 mins): Communication assessment.
+
+Stage 3: Technical Interview
+Duration: 20–30 minutes, one-on-one.
+
+Topics: OS (deadlocks, semaphores), DBMS (joins, queries), OOPs, DSA (basic: arrays, strings, sorting), projects/resume deep dive.
+
+Expect to write code on whiteboard or shared editor.
+
+Stage 4: HR Interview
+Duration: 10–20 minutes.
+
+Topics: Communication, motivation, career goals, salary expectations, behavioral questions (STAR method).
+
+Often combined with Technical Interview in some drives.
+
+Wipro Aptitude Test – Detailed Breakdown
+Test Structure (Online Round)
+Section	Questions	Time	Difficulty
+Quantitative Aptitude	20	20 min	Moderate
+Logical Reasoning	20	20 min	Easy–Moderate
+Verbal Ability	8	8 min	Easy
+Aptitude filters ~60% of applicants; focus on speed and accuracy.
+
+Quantitative Aptitude Topics
+Percentages
+
+Profit and Loss
+
+Ratio and Proportions
+
+Time and Work
+
+Time, Speed and Distance
+
+Probability
+
+Permutations and Combinations
+
+Simple and Compound Interest
+
+Averages
+
+Number System
+
+Sample Quantitative Questions
+Q1. What is 30% of 150?
+Answer: 45
+
+Q2. If CP = Rs. 600, SP = Rs. 720, find profit %.
+Answer: Profit = 120, Profit % = (120/600) × 100 = 20%
+
+Q3. A can do work in 15 days, B in 20 days. Together?
+Answer: Together = (15×20)/(15+20) = 300/35 ≈ 8.57 days
+
+Q4. Car travels 200 km in 4 hours. Speed?
+Answer: 200/4 = 50 km/h
+
+Q5. Sum of first 12 natural numbers?
+Answer: n(n+1)/2 = 12×13/2 = 78
+
+Logical Reasoning Topics
+Blood Relations
+
+Series Completion
+
+Coding-Decoding
+
+Analogy
+
+Directions
+
+Puzzles
+
+Seating Arrangements
+
+Data Sufficiency
+
+Sample Logical Reasoning Questions
+Q1. Complete series: 2, 4, 8, 16, ?
+Answer: 32 (pattern: ×2)
+
+Q2. If A is B's mother, B is C's father, C is D's sister. How is A related to D?
+Answer: Grandmother
+
+Q3. Series: 3, 6, 11, 18, 27, ?
+Answer: 38 (differences: 3, 5, 7, 9, 11)
+
+Q4. Coding: If PEN = 16514, what is BOOK?
+Answer: B=2, O=15, O=15, K=11 → 2151511
+
+Verbal Ability Topics
+Synonyms and Antonyms
+
+Sentence Correction
+
+Fill in the Blanks
+
+Para Jumbles
+
+Reading Comprehension
+
+Idioms and Phrases
+
+Sample Verbal Questions
+Q1. Choose the correct sentence:
+a) He go to office
+b) He goes to office
+c) He going to office
+Answer: b) He goes to office
+
+Q2. Synonym of "Strong":
+Answer: Powerful
+
+Q3. Antonym of "Kind":
+Answer: Cruel
+
+Wipro Technical MCQs – Detailed Breakdown
+Test Structure
+12 MCQs, 12 minutes.
+
+Focus: Code output prediction, problem identification, time complexity, OS/DBMS/CN basics.
+
+Languages: C/C++/Java output questions.
+
+Sample Technical MCQs
+Q1. What is the output?
+
+c
+int x = 5;
+printf("%d", x++);
+Answer: 5 (post-increment prints first, then increments).
+
+Q2. What is the time complexity of bubble sort?
+Answer: O(n²)
+
+Q3. What is a deadlock?
+Answer: A situation where two or more processes wait indefinitely for resources held by each other.
+
+Q4. What is the purpose of a primary key?
+Answer: Uniquely identifies a record in a table.
+
+Q5. Which protocol is connection-oriented?
+Answer: TCP.
+
+Wipro Coding Assessment – Detailed Breakdown
+Test Structure
+2 coding questions.
+
+Duration: 60 minutes (included in 128 mins assessment).
+
+Languages: C++ and Java only (no Python).
+
+Difficulty: Easy (array/string basics, patterns, GCD).
+
+Common Coding Topics
+Arrays (reverse, max/min, sum, linear search)
+
+Strings (palindrome, reverse, count vowels)
+
+Loops and Conditions (factorial, Fibonacci, patterns)
+
+Basic Mathematics (GCD, LCM, prime check)
+
+Sorting (bubble sort)
+
+Sample Coding Questions (Wipro SDE Sheet)
+Q1. Reverse an Array
+
+cpp
+#include <iostream>
+using namespace std;
+void reverse_array(int arr[], int n) {
+    for (int i = 0; i < n / 2; i++) {
+        swap(arr[i], arr[n - 1 - i]);
+    }
+}
+Q2. Check if a String is Palindrome
+
+java
+public class Palindrome {
+    public static boolean isPalindrome(String s) {
+        return s.equals(new StringBuilder(s).reverse().toString());
+    }
+}
+Q3. Find GCD of Two Numbers
+
+cpp
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+Q4. Print First n Fibonacci Numbers
+
+java
+public class Fibonacci {
+    public static void printFibonacci(int n) {
+        int a = 0, b = 1;
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+    }
+}
+Q5. Bubble Sort
+
+cpp
+void bubble_sort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+Q6. Print Perfect Numbers up to n
+
+cpp
+bool is_perfect(int num) {
+    int sum = 1;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            sum += i;
+            if (i * i != num) sum += num / i;
+        }
+    }
+    return sum == num;
+}
+Coding Preparation Strategies
+Practice 10–20 coding problems daily.
+
+Focus on arrays, strings, loops, conditions, basic sorting.
+
+Write clean, commented code with input/output handling.
+
+Test code with multiple inputs (edge cases).
+
+Learn time and space complexity basics (O(n), O(n²)).
+
+Use HackerRank, GeeksforGeeks Wipro SDE sheet.
+
+Wipro Technical Interview – Topics and Questions
+Interview Duration
+20–30 minutes.
+
+One-on-one with a technical recruiter or engineer.
+
+Expect to write code on whiteboard or shared editor.
+
+Common Technical Topics
+Programming Fundamentals (C, C++, Java)
+
+OOP Concepts (Class, Object, Inheritance, Polymorphism, Abstraction, Encapsulation)
+
+DBMS and SQL (Primary/Foreign Key, Joins, Queries)
+
+Operating Systems (Process, Thread, Deadlock, Semaphores, Memory)
+
+Computer Networks (TCP/UDP, IP, HTTP)
+
+Data Structures (Arrays, Strings, Sorting, Basic Linked List)
+
+Projects, Internships, Hackathons
+
+Domain Knowledge (CS/IT basics or branch fundamentals)
+
+Sample Technical Questions and Answers
+Q1. What is OOP? Explain its features.
+Answer: OOP (Object-Oriented Programming) is a paradigm based on objects containing data and methods. Features: Class, Object, Inheritance, Polymorphism, Abstraction, Encapsulation.
+
+Q2. What is the difference between SQL and NoSQL?
+Answer: SQL is relational, structured, uses tables. NoSQL is non-relational, unstructured, uses documents, graphs, or key-value stores.
+
+Q3. Explain deadlock and semaphores.
+Answer: Deadlock: processes wait indefinitely for resources. Semaphores: synchronization primitives to control access to resources.
+
+Q4. What is a join? Types of joins?
+Answer: Join combines rows from two tables. Types: INNER, LEFT, RIGHT, FULL.
+
+Q5. Write a SQL query to find the second highest salary.
+
+sql
+SELECT MAX(Salary) AS SecondHighest
+FROM Employee
+WHERE Salary < (SELECT MAX(Salary) FROM Employee);
+Q6. What is recursion? Give an example.
+Answer: Recursion is a function calling itself. Example: factorial, Fibonacci.
+
+Q7. Explain TCP and UDP.
+Answer: TCP is connection-oriented, reliable. UDP is connection-less, faster but unreliable.
+
+Q8. What is your favorite project? Explain goal, tech, challenges, results.
+Answer: Example: ML dashboard using Python, Streamlit, FastAPI. Goal: visualize data. Tech: Pandas, Streamlit. Challenge: data cleaning. Result: accurate dashboard.
+
+Q9. What is bubble sort? Time complexity?
+Answer: Bubble sort swaps adjacent elements if out of order. Time complexity: O(n²).
+
+Q10. Difference between array and linked list.
+Answer: Array: fixed size, contiguous memory. Linked list: dynamic size, non-contiguous, uses pointers.
+
+Wipro HR Interview – Questions and Sample Answers
+Interview Duration
+10–20 minutes.
+
+Focus on communication, motivation, fit, behavioral questions.
+
+Use STAR method for stories (Situation, Task, Action, Result).
+
+Common HR Questions and Answers
+Q1. Tell me about yourself.
+Answer: I am a third-year B.Tech student in Electronics and Instrumentation Engineering. I have strong interest in machine learning, full-stack development, and data analytics. I have worked on coding projects using Python, FastAPI, and Streamlit, and I actively participate in college hackathons.
+
+Q2. What are your strengths and weaknesses?
+Answer: Strengths: problem-solving, quick learning, teamwork. Weakness: I sometimes take time to speak in group discussions. I am improving by practicing active participation.
+
+Q3. Why should we hire you?
+Answer: I have strong technical skills in C++, Java, and basic DSA, matching role requirements. I have completed projects using coding and algorithms, and I am eager to learn and contribute.
+
+Q4. Why do you want to work at Wipro?
+Answer: Wipro works on innovative digital transformation and cloud solutions, aligning with my interest in IT services and coding. The role offers opportunities to work on real projects and learn from experienced teams.
+
+Q5. What are your career goals?
+Answer: Short-term: gain hands-on experience in IT services and coding. Long-term: become a software engineer leading impactful projects.
+
+Q6. How do you handle stress?
+Answer: I prioritize tasks, break them into smaller steps, and take short breaks. During a hackathon, I stayed calm and resolved a critical bug under time pressure.
+
+Q7. What are your salary expectations?
+Answer: As a fresher, I focus on learning. I expect ₹3.5–4.5 LPA aligned with role (Project Engineer/Software Engineer) and open to discussion based on company policies.
+
+Q8. Describe a teamwork experience.
+Answer (STAR): Situation: Group project for data dashboard. Task: I handled data cleaning. Action: Used Pandas, coordinated with teammates. Result: Completed on time, learned collaboration.
+
+Q9. What is your aim in life?
+Answer: To become a skilled software engineer contributing to innovative tech solutions, growing professionally, and balancing work with personal development.
+
+Q10. Introduce yourself and your family.
+Answer: I am SARWESHWARAN S, a B.Tech student in Electronics and Instrumentation Engineering at Puducherry Technical University. I have a supportive family interested in my career growth. I focus on coding, ML, and hackathons.
+
+Real Wipro Interview Experiences
+Experience 1: B.Tech Student (Project Engineer)
+The online test had 128 mins: 48 aptitude (20 quant, 20 logical, 8 verbal), 12 technical MCQs (code output, OS/DBMS), 2 coding (reverse array, palindrome), 8 mins essay. Technical interview asked about OOP, deadlock, joins, and my ML project. HR focused on motivation, strengths, weaknesses, and salary. I cleared all stages and got Project Engineer role at ₹3.5 LPA.
+
+Experience 2: MCA Student (Software Engineer)
+Aptitude was moderate. Coding had 2 problems: Fibonacci and GCD. Technical interview covered OS, DBMS, bubble sort, and recursion. HR asked about teamwork, stress, and career goals. I was selected as Software Engineer at ₹4.5 LPA.
+
+Experience 3: NLTH Participant (Analyst Track)
+NLTH coding was easy: 2 array/string problems (linear search, reverse string). I solved both fully. Technical interview was deep on OOP and DBMS. HR was friendly. I got Analyst role at ₹5.5–6.5 LPA.
+
+Preparation Strategies for Wipro Placements
+4-Week Service Company Plan (Project Engineer / Software Engineer)
+Week 1: Aptitude (Quantitative + Logical Reasoning)
+
+Practice 20–30 questions daily.
+
+Focus on percentages, profit-loss, ratio, time-work, speed-distance, probability, permutations.
+
+Use Unstop, GeeksforGeeks Wipro aptitude, PrepInsta.
+
+Learn shortcuts and tricks.
+
+Week 2: Basic Coding (Arrays, Strings, Sorting)
+
+Practice 10–20 problems daily.
+
+Focus on arrays (reverse, max/min), strings (palindrome, reverse), loops (factorial, Fibonacci).
+
+Use HackerRank, GeeksforGeeks Wipro SDE sheet.
+
+Write clean, tested code in C++/Java.
+
+Week 3: CS Theory (OS, DBMS, CN, OOPs)
+
+Revise OOP features, deadlock, semaphores, SQL joins, TCP/UDP.
+
+Practice SQL: second highest salary, joins, primary/foreign key.
+
+Use GeeksforGeeks Wipro recruitment page.
+
+Week 4: Mock Tests and Interview Practice
+
+Take 2–3 mock aptitude + coding tests.
+
+Practice HR answers aloud (STAR method).
+
+Simulate technical interview with friend.
+
+Review weak areas.
+
+Key Resources
+Aptitude: Unstop Wipro aptitude, IndiaBIX, GeeksforGeeks.
+
+Coding: HackerRank, CodeForces, GeeksforGeeks Wipro SDE sheet.
+
+CS Theory: GeeksforGeeks OS/DBMS/CN/OOP notes, W Code CS theory.
+
+Mock Tests: PrepInsta Wipro mock, W Code company-specific mocks.
+
+Time Management
+Allocate 2–3 hours daily: 1 hour aptitude, 1 hour coding, 30 mins CS theory, 30 mins HR.
+
+Total prep time: 1–2 months.
+
+Common Mistakes in Wipro Placements
+Neglecting aptitude practice (filters 60% of applicants).
+
+Writing untested coding code in C++/Java only.
+
+Poor project explanation (vague goal/tech/results).
+
+Generic HR answers (no STAR stories).
+
+Not researching Wipro (values, roles, salary).
+
+Lack of confidence in technical interview.
+
+Missing eligibility (GPA < 60%, backlogs).
+
+Salary & Compensation (India)
+Project Engineer: ₹3.5 LPA.
+
+Software Engineer: ₹4.5 LPA.
+
+Analyst: ₹5.5–6.5 LPA.
+
+Exact compensation depends on role, location, and interview performance.
+
+How to Get an Interview at Wipro
+Apply through Wipro careers page, employee referrals, or campus placement drives.
+
+Register for hiring exams: Wipro NLTH (Project Engineer), Turbo/Elite (Software Engineer/Analyst).
+
+Meet eligibility: 60% throughout, no backlogs.
+
+Difficulty Level and Prep Timeline
+Overall difficulty: Medium (focus on aptitude, basic coding, CS fundamentals).
+
+Recommended prep time: 1–2 months.
+
+Master aptitude, basic DSA (arrays, strings, sorting), and CS theory (OS, DBMS, CN, OOPs).
+
+RAG-Friendly Chunking Suggestions
+Chunk boundaries for indexing:
+
+Wipro Hiring Process Stages
+
+Aptitude Test Structure and Topics
+
+Quantitative Aptitude Sample Questions
+
+Logical Reasoning Sample Questions
+
+Verbal Ability Sample Questions
+
+Technical MCQs Sample Questions
+
+Coding Assessment Topics and Sample Problems (SDE Sheet)
+
+Technical Interview Topics and Questions
+
+HR Interview Questions and Answers (STAR)
+
+Real Interview Experiences (Project Engineer/Software Engineer/Analyst)
+
+4-Week Preparation Plan
+
+Common Mistakes and Eligibility
+
+Salary and Compensation
+
+Search Tags
+Wipro placement process
+
+Wipro aptitude test questions
+
+Wipro coding assessment problems
+
+Wipro technical interview topics
+
+Wipro HR interview questions
+
+Wipro interview experiences Project Engineer Software Engineer Analyst
+
+Wipro preparation strategies 4-week
+
+Wipro NLTH Turbo Elite prep
+
+Wipro rag content
+
+Closing Note
+This Wipro placement preparation knowledge base is designed for quick revision, practice, and structured learning. For Wipro placements, consistent aptitude and coding practice (C++/Java only), clear technical explanations (OOP, DBMS, OS, CN), and confident HR communication (STAR method) are key to success. Register for Wipro NLTH early, focus on basic DSA and CS theory, and aim for 1–2 months of prep to crack Project Engineer/Software Engineer/Analyst roles.

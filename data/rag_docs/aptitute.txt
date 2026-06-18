@@ -1,0 +1,631 @@
+# Placement Aptitude Preparation Knowledge Base
+
+## Document Purpose
+This document is a comprehensive placement aptitude preparation guide designed as structured knowledge base content for retrieval-augmented generation (RAG) systems. It covers quantitative aptitude, logical reasoning, and data interpretation topics commonly tested in placement exams, internships, and competitive recruitment processes. The content includes concepts, formulas, shortcuts, solved examples, and frequent interview questions with answers for efficient revision and practice.
+
+## Audience and Scope
+- Intended for undergraduate students, fresh graduates, and early-career candidates.
+- Suitable for engineering, management, and general placement preparation.
+- Covers topics appearing in 80–90% of placement aptitude tests [web:39].
+- Focuses on problem-solving speed, formula recall, and trick-based solutions.
+- Includes both conceptual understanding and practice-heavy examples.
+
+## How to Use This Knowledge Base
+- Revise formulas section per topic before solving problems.
+- Study shortcuts and tricks for time-saving in exams.
+- Practice solved examples manually to build speed.
+- Use interview questions for self-testing and verbal explanation practice.
+- For RAG indexing, each major section can be chunked independently.
+
+## Common Placement Aptitude Test Structure
+Placement tests typically include:
+- Quantitative Aptitude: 30–50 questions
+- Logical Reasoning: 20–35 questions
+- Verbal Ability: 15–25 questions
+- Sometimes Technical Aptitude: basic programming, DBMS, OS, networking [web:35]
+
+## Section 1: Percentages
+
+### Definition
+Percentage means "per hundred" and expresses a fraction as parts out of 100.
+
+### Core Formula
+\[
+\% = \frac{\text{Part}}{\text{Whole}} \times 100
+\]
+
+### Key Formulas
+- Percentage increase: \(\frac{\text{New} - \text{Old}}{\text{Old}} \times 100\)
+- Percentage decrease: \(\frac{\text{Old} - \text{New}}{\text{Old}} \times 100\)
+- If A is x% more than B: \(B = \frac{A}{1 + \frac{x}{100}}\)
+- If A is x% less than B: \(B = \frac{A}{1 - \frac{x}{100}}\)
+
+### Useful Tricks
+- 10% = divide by 10
+- 20% = divide by 5
+- 25% = divide by 4
+- 50% = divide by 2
+- 1% = divide by 100
+
+### Solved Example 1
+**Question:** What is 25% of 200?
+
+**Solution:**
+\[
+25\% \times 200 = \frac{25}{100} \times 200 = 50
+\]
+
+### Solved Example 2
+**Question:** A student's score increased from 60 to 75. What is the percentage increase?
+
+**Solution:**
+\[
+\text{Increase} = 75 - 60 = 15
+\]
+\[
+\% \text{ increase} = \frac{15}{60} \times 100 = 25\%
+\]
+
+### Interview Questions and Answers
+**Q1. If price increases by 20%, by what percentage should consumption decrease to keep expenditure same?**  
+Let old price = 100, new price = 120. To keep expenditure same: \(100 \times \text{old consumption} = 120 \times \text{new consumption}\) → new = \(100/120 = 5/6\). Decrease = \(1 - 5/6 = 1/6 ≈ 16.67\%\)
+
+**Q2. A number is increased by 10% then decreased by 10%. What is the net change?**  
+Net change = \(-1\%\) decrease. Formula: net = \(-\frac{x^2}{100}\) for equal +x% and -x%.
+
+## Section 2: Profit and Loss
+
+### Definition
+- Cost Price (CP): price at which an item is bought.
+- Selling Price (SP): price at which an item is sold.
+- Profit = SP - CP (when SP > CP)
+- Loss = CP - SP (when CP > SP)
+
+### Core Formulas
+\[
+\text{Profit} = SP - CP
+\]
+\[
+\text{Loss} = CP - SP
+\]
+\[
+\text{Profit \%} = \frac{\text{Profit}}{CP} \times 100
+\]
+\[
+\text{Loss \%} = \frac{\text{Loss}}{CP} \times 100
+\]
+\[
+SP = CP \times \left(1 + \frac{\text{Profit \%}}{100}\right)
+\]
+\[
+SP = CP \times \left(1 - \frac{\text{Loss \%}}{100}\right)
+\]
+
+### Useful Tricks
+- Profit/Loss % is always calculated on CP unless stated otherwise.
+- If SP of x items = CP of y items, profit/loss % = \(\frac{y - x}{x} \times 100\)
+- Two successive profits of x% and y%: net = \(x + y + \frac{xy}{100}\)
+- Two equal percentages +x% and -x%: net = \(-\frac{x^2}{100}\)
+
+### Solved Example 1
+**Question:** CP = Rs. 800, SP = Rs. 960. Find profit %.
+
+**Solution:**
+\[
+\text{Profit} = 960 - 800 = 160
+\]
+\[
+\text{Profit \%} = \frac{160}{800} \times 100 = 20\%
+\]
+
+### Solved Example 2
+**Question:** A sells a car for Rs. 500,000 at 20% loss. Find CP.
+
+**Solution:**
+\[
+SP = CP \times (1 - 0.20) = 0.8 \times CP
+\]
+\[
+CP = \frac{500000}{0.8} = 625000
+\]
+
+### Interview Questions and Answers
+**Q1. If SP of 40 articles = CP of 50 articles, find gain/loss %.**  
+Let CP of 1 article = 1. CP of 50 = 50. SP of 40 = 50 → SP of 1 = 1.25. Profit = 0.25 → 25% gain.
+
+**Q2. A man sells two cycles for Rs. 4000 each, gaining 20% on one and losing 20% on the other. Net result?**  
+Net = \(-\frac{20^2}{100} = -4\%\) loss.
+
+## Section 3: Ratio and Proportion
+
+### Definition
+- Ratio compares two quantities: \(a:b = \frac{a}{b}\)
+- Proportion states equality of two ratios: \(a:b = c:d\)
+
+### Core Formulas
+\[
+a:b = c:d \implies ad = bc
+\]
+\[
+\text{If } a:b = m:n, \text{ then } a = \frac{m}{m+n} \times \text{total}, \text{ } b = \frac{n}{m+n} \times \text{total}
+\]
+
+### Useful Tricks
+- Ratio simplification: divide both by GCD.
+- To divide amount in ratio a:b:c: each part = \(\frac{\text{ratio}}{\text{sum of ratios}} \times \text{total}\)
+- Age problems: use ratio with time offset.
+
+### Solved Example 1
+**Question:** Ratio of boys to girls is 3:2. Total students = 100. Find numbers.
+
+**Solution:**
+Sum of ratio = 5. Boys = \(\frac{3}{5} \times 100 = 60\). Girls = \(\frac{2}{5} \times 100 = 40\).
+
+### Solved Example 2
+**Question:** If \(a:b = 2:3\) and \(b:c = 4:5\), find \(a:b:c\).
+
+**Solution:**
+Make b same: \(a:b = 8:12\), \(b:c = 12:15\). So \(a:b:c = 8:12:15\).
+
+### Interview Questions and Answers
+**Q1. Rs. 6000 divided in ratio 2:3:5. Find middle share.**  
+Sum = 10. Middle = \(\frac{3}{10} \times 6000 = 1800\).
+
+**Q2. Ratio of ages is 4:5. After 10 years, ratio becomes 6:7. Find present ages.**  
+Let ages = 4x, 5x. After 10 years: \(\frac{4x+10}{5x+10} = \frac{6}{7}\). Solve: 28x + 70 = 30x + 60 → 2x = 10 → x = 5. Ages = 20, 25.
+
+## Section 4: Time and Work
+
+### Definition
+Time and Work problems involve calculating how long tasks take given worker efficiencies.
+
+### Core Formulas
+- Work = Rate × Time
+- If A can do work in n days, A's 1 day work = \(\frac{1}{n}\)
+- If A and B together finish in n days: \(\frac{1}{A} + \frac{1}{B} = \frac{1}{n}\)
+- Man-days: Work = Men × Days
+
+### Useful Tricks
+- If A takes x days, B takes y days: together = \(\frac{xy}{x+y}\)
+- Efficiency ratio: if A is twice as efficient as B, A takes half time.
+- Work left = 1 - (work done)
+
+### Solved Example 1
+**Question:** A can do work in 10 days, B in 15 days. Together?
+
+**Solution:**
+A's 1 day = 1/10, B's 1 day = 1/15. Together = \(\frac{1}{10} + \frac{1}{15} = \frac{3+2}{30} = \frac{5}{30} = \frac{1}{6}\). Together = 6 days.
+
+### Solved Example 2
+**Question:** 10 men can do work in 12 days. How many days for 15 men?
+
+**Solution:**
+Work = 10 × 12 = 120 man-days. Days = \(\frac{120}{15} = 8\) days.
+
+### Interview Questions and Answers
+**Q1. A and B together finish in 6 days. A alone in 10 days. B alone?**  
+\(\frac{1}{A} + \frac{1}{B} = \frac{1}{6}\). \(\frac{1}{10} + \frac{1}{B} = \frac{1}{6}\) → \(\frac{1}{B} = \frac{1}{6} - \frac{1}{10} = \frac{5-3}{30} = \frac{2}{30}\) → B = 15 days.
+
+**Q2. 5 men + 3 boys = 10 days. 3 men + 5 boys = 12 days. Find 1 man + 1 boy together?**  
+Let 1 man = m, 1 boy = b. 5m + 3b = 1/10, 3m + 5b = 1/12. Solve to get m+b = 1/20 → 20 days.
+
+## Section 5: Time, Speed and Distance
+
+### Definition
+Speed = Distance / Time. Used for motion problems.
+
+### Core Formulas
+\[
+\text{Speed} = \frac{\text{Distance}}{\text{Time}}
+\]
+\[
+\text{Distance} = \text{Speed} \times \text{Time}
+\]
+\[
+\text{Time} = \frac{\text{Distance}}{\text{Speed}}
+\]
+- Unit conversion: km/h to m/s = × \(\frac{5}{18}\); m/s to km/h = × \(\frac{18}{5}\)
+- Relative speed: same direction = \(S1 - S2\), opposite = \(S1 + S2\)
+
+### Useful Tricks
+- Average speed for equal distances: \(\frac{2S1 \times S2}{S1 + S2}\)
+- If speed increases by x%, time decreases by \(\frac{x}{100+x}\)
+- Train crossing pole: distance = length of train. Train crossing platform: distance = train + platform.
+
+### Solved Example 1
+**Question:** Car travels 120 km in 2 hours. Find speed.
+
+**Solution:**
+\[
+\text{Speed} = \frac{120}{2} = 60 \text{ km/h}
+\]
+
+### Solved Example 2
+**Question:** Train length 100 m, speed 72 km/h. Time to cross pole?
+
+**Solution:**
+Speed = \(72 \times \frac{5}{18} = 20 \text{ m/s}\). Time = \(\frac{100}{20} = 5 \text{ s}\).
+
+### Interview Questions and Answers
+**Q1. A covers same distance at 60 km/h and 40 km/h. Find average speed.**  
+Average = \(\frac{2 \times 60 \times 40}{60 + 40} = \frac{4800}{100} = 48 \text{ km/h}\).
+
+**Q2. Two trains 100 m and 150 m, speeds 60 km/h and 40 km/h opposite. Time to cross?**  
+Relative speed = 100 km/h = \(100 \times \frac{5}{18} = 27.78 \text{ m/s}\). Distance = 250 m. Time = \(\frac{250}{27.78} ≈ 9 \text{ s}\).
+
+## Section 6: Probability
+
+### Definition
+Probability = Favorable outcomes / Total outcomes.
+
+### Core Formulas
+\[
+P(E) = \frac{\text{Favorable outcomes}}{\text{Total outcomes}}
+\]
+\[
+P(\text{not } E) = 1 - P(E)
+\]
+\[
+P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)
+\]
+\[
+P(A \text{ and } B) = P(A) \times P(B) \text{ (independent)}
+\]
+
+### Useful Tricks
+- For coin: total outcomes = \(2^n\) for n coins.
+- For dice: total outcomes = \(6^n\) for n dice.
+- Combinations: use C(n,k) for selecting without order.
+
+### Solved Example 1
+**Question:** One die rolled. Probability of even number?
+
+**Solution:**
+Even = {2, 4, 6} = 3 outcomes. Total = 6. \(P = \frac{3}{6} = 0.5\).
+
+### Solved Example 2
+**Question:** Two coins tossed. Probability of exactly one head?
+
+**Solution:**
+Outcomes = {HH, HT, TH, TT} = 4. Exactly one head = {HT, TH} = 2. \(P = \frac{2}{4} = 0.5\).
+
+### Interview Questions and Answers
+**Q1. Bag has 3 red, 2 blue. 2 balls drawn. Probability both red?**  
+Total = 5. Ways to choose 2 = C(5,2) = 10. Both red = C(3,2) = 3. \(P = \frac{3}{10} = 0.3\).
+
+**Q2. Die rolled twice. Probability sum = 7?**  
+Pairs = (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6. Total = 36. \(P = \frac{6}{36} = \frac{1}{6}\).
+
+## Section 7: Permutations and Combinations
+
+### Definition
+- Permutation: arrangement with order (P(n,k))
+- Combination: selection without order (C(n,k))
+
+### Core Formulas
+\[
+P(n,k) = \frac{n!}{(n-k)!}
+\]
+\[
+C(n,k) = \frac{n!}{k!(n-k)!}
+\]
+\[
+n! = n \times (n-1) \times \dots \times 1
+\]
+
+### Useful Tricks
+- Permutation of n items: n!
+- With repetition: \(n^k\) for k positions.
+- C(n,k) = C(n, n-k)
+- For words: arrange letters, consider repeated letters.
+
+### Solved Example 1
+**Question:** Arrange 4 books. How many ways?
+
+**Solution:**
+4! = 24 ways.
+
+### Solved Example 2
+**Question:** Choose 3 from 5. How many ways?
+
+**Solution:**
+C(5,3) = \(\frac{5!}{3!2!} = \frac{120}{6 \times 2} = 10\).
+
+### Interview Questions and Answers
+**Q1. How many 3-digit numbers from 1,2,3,4 without repetition?**  
+P(4,3) = \(\frac{4!}{1!} = 24\).
+
+**Q2. Word "APPLE". Arrangements?**  
+5 letters, P repeated twice. Arrangements = \(\frac{5!}{2!} = 60\).
+
+## Section 8: Simple and Compound Interest
+
+### Definition
+- Simple Interest (SI): interest on principal only.
+- Compound Interest (CI): interest on principal + accumulated interest.
+
+### Core Formulas
+\[
+SI = \frac{P \times R \times T}{100}
+\]
+\[
+A = P + SI = P \left(1 + \frac{R \times T}{100}\right)
+\]
+\[
+CI = P \left(1 + \frac{R}{100}\right)^T - P
+\]
+\[
+A = P \left(1 + \frac{R}{100}\right)^T
+\]
+
+### Useful Tricks
+- For 2 years: CI - SI = \(\frac{P \times R^2}{100^2}\)
+- For equal amounts: use average rate.
+- Half-yearly compounding: rate = R/2, time = 2T.
+
+### Solved Example 1
+**Question:** P = Rs. 1000, R = 10%, T = 2 years. Find SI.
+
+**Solution:**
+\[
+SI = \frac{1000 \times 10 \times 2}{100} = 200
+\]
+
+### Solved Example 2
+**Question:** Same P, R, T. Find CI.
+
+**Solution:**
+\[
+CI = 1000 \left(1 + \frac{10}{100}\right)^2 - 1000 = 1000 \times 1.21 - 1000 = 210
+\]
+
+### Interview Questions and Answers
+**Q1. SI on Rs. 5000 at 8% for 3 years?**  
+SI = \(\frac{5000 \times 8 \times 3}{100} = 1200\).
+
+**Q2. CI - SI for 2 years = Rs. 40, P = 1000. Find R.**  
+CI - SI = \(\frac{1000 \times R^2}{10000} = 40\) → \(R^2 = 400\) → R = 20%.
+
+## Section 9: Averages
+
+### Definition
+Average = Sum of terms / Number of terms.
+
+### Core Formulas
+\[
+\text{Average} = \frac{\text{Sum}}{\text{Count}}
+\]
+\[
+\text{Sum} = \text{Average} \times \text{Count}
+\]
+
+### Useful Tricks
+- New average after adding x: new sum = old sum + x, new count = old count + 1.
+- Weighted average: \(\frac{n1 \times a1 + n2 \times a2}{n1 + n2}\)
+- If average of n numbers is A and one number removed is x, new average = \(\frac{nA - x}{n-1}\)
+
+### Solved Example 1
+**Question:** Average of 5 numbers = 20. Find sum.
+
+**Solution:**
+Sum = 20 × 5 = 100.
+
+### Solved Example 2
+**Question:** Ages of 4 students = 18, 20, 22, 24. Find average.
+
+**Solution:**
+Sum = 84. Average = 84 / 4 = 21.
+
+### Interview Questions and Answers
+**Q1. Average of 6 numbers = 15. Remove 10. New average?**  
+Sum = 90. New sum = 80. New average = 80 / 5 = 16.
+
+**Q2. Class: 20 boys avg 18, 30 girls avg 22. Overall avg?**  
+Weighted = \(\frac{20 \times 18 + 30 \times 22}{50} = \frac{360 + 660}{50} = 20.4\).
+
+## Section 10: Number System
+
+### Definition
+Number system deals with types of numbers: natural, whole, integers, prime, composite, even, odd.
+
+### Core Concepts
+- Natural numbers: 1, 2, 3, ...
+- Whole numbers: 0, 1, 2, 3, ...
+- Integers: ..., -2, -1, 0, 1, 2, ...
+- Prime: divisible only by 1 and itself (2, 3, 5, 7, ...)
+- Composite: more than 2 divisors
+- Even: divisible by 2
+- Odd: not divisible by 2
+
+### Useful Tricks
+- Sum of first n natural numbers: \(\frac{n(n+1)}{2}\)
+- Sum of first n even numbers: \(n(n+1)\)
+- Sum of first n odd numbers: \(n^2\)
+- Divisibility: by 2 (ends even), 3 (sum of digits multiple of 3), 5 (ends 0/5), 10 (ends 0)
+
+### Solved Example 1
+**Question:** Sum of first 10 natural numbers?
+
+**Solution:**
+\[
+\frac{10 \times 11}{2} = 55
+\]
+
+### Solved Example 2
+**Question:** Is 91 prime?
+
+**Solution:**
+91 = 7 × 13 → not prime.
+
+### Interview Questions and Answers
+**Q1. Smallest prime number?**  
+2.
+
+**Q2. How many primes between 1 and 20?**  
+2, 3, 5, 7, 11, 13, 17, 19 → 8 primes.
+
+## Section 11: Logical Reasoning
+
+### Definition
+Logical reasoning tests pattern recognition, deduction, and problem-solving without relying on domain knowledge.
+
+### Common Types
+- Series completion (number, alphabet)
+- Coding-decoding
+- Syllogisms
+- Blood relations
+- Directions and distances
+- Puzzles
+- Seating arrangements
+- Data sufficiency
+- Analogies
+
+### Useful Tricks
+- Number series: look for +, -, ×, ÷, squares, cubes.
+- Alphabet series: A=1, B=2, ..., Z=26.
+- Coding: letter shift, reverse, position-based.
+- Syllogism: use Venn diagrams.
+- Direction: use north-up convention.
+
+### Solved Example 1
+**Question:** Complete series: 2, 4, 8, 16, ?
+
+**Solution:**
+Pattern: ×2 → next = 32.
+
+### Solved Example 2
+**Question:** If A is B's mother, B is C's father, C is D's brother. How is A related to D?
+
+**Solution:**
+A → B → C → D. A is D's grandmother.
+
+### Interview Questions and Answers
+**Q1. Series: 3, 6, 11, 18, 27, ?**  
+Differences: 3, 5, 7, 9 → next diff = 11 → 27 + 11 = 38.
+
+**Q2. If P is Q's brother, Q is R's sister, R is S's father. How is P related to S?**  
+P → Q → R → S. P is S's uncle.
+
+## Section 12: Data Interpretation
+
+### Definition
+Data Interpretation (DI) involves analyzing tables, charts, graphs, and extracting insights.
+
+### Common Types
+- Tables
+- Bar graphs
+- Pie charts
+- Line graphs
+- Caselets
+- Mixed DI
+
+### Useful Tricks
+- Read question before data.
+- Estimate quickly before exact calculation.
+- Use percentages for comparisons.
+- Look for trends, not just values.
+- Practice speed reading of charts.
+
+### Solved Example 1
+**Question:** Bar graph shows sales: 2020 = 100, 2021 = 120. Find % increase.
+
+**Solution:**
+\[
+\% = \frac{120 - 100}{100} \times 100 = 20\%
+\]
+
+### Solved Example 2
+**Question:** Pie chart: total = 500. Sector = 20%. Find value.
+
+**Solution:**
+Value = 20% × 500 = 100.
+
+### Interview Questions and Answers
+**Q1. Table: A=100, B=150, C=200. Find B's % of total.**  
+Total = 450. B% = \(\frac{150}{450} \times 100 = 33.33\%\)
+
+**Q2. Line graph: 2019 = 80, 2020 = 100, 2021 = 120. Avg growth?**  
+Growth: 20, 20 → avg = 20.
+
+## Quick Revision Formulas Summary
+
+### Percentages
+- \(\% = \frac{\text{Part}}{\text{Whole}} \times 100\)
+- Increase: \(\frac{\text{New} - \text{Old}}{\text{Old}} \times 100\)
+
+### Profit and Loss
+- Profit = SP - CP
+- Profit % = \(\frac{\text{Profit}}{CP} \times 100\)
+
+### Ratio
+- \(a:b = c:d \implies ad = bc\)
+
+### Time and Work
+- Work = Rate × Time
+- Together: \(\frac{xy}{x+y}\)
+
+### Speed
+- \(S = \frac{D}{T}\)
+- Average speed (equal dist): \(\frac{2S1 \times S2}{S1 + S2}\)
+
+### Probability
+- \(P = \frac{\text{Favorable}}{\text{Total}}\)
+
+### Permutation/Combination
+- P(n,k) = \(\frac{n!}{(n-k)!}\)
+- C(n,k) = \(\frac{n!}{k!(n-k)!}\)
+
+### Interest
+- SI = \(\frac{PRT}{100}\)
+- CI = \(P(1 + \frac{R}{100})^T - P\)
+
+### Averages
+- Avg = \(\frac{\text{Sum}}{\text{Count}}\)
+
+### Number System
+- Sum 1 to n: \(\frac{n(n+1)}{2}\)
+
+## Common Mistakes in Aptitude Tests
+- Confusing profit % on SP vs CP.
+- Forgetting unit conversion in speed.
+- Using wrong average formula.
+- Not reading DI question first.
+- Ignoring "not" in probability.
+- Miscounting in permutations.
+
+## Placement Interview Strategy
+- Revise formulas per topic.
+- Practice 10–20 questions daily.
+- Use shortcuts for time-saving.
+- Explain reasoning clearly in verbal rounds.
+- For DI, read question before analyzing data.
+- For logical reasoning, draw diagrams when needed.
+
+## RAG-Friendly Chunking Suggestions
+Chunk boundaries for indexing:
+- Percentages Concepts and Formulas
+- Profit and Loss Formulas and Tricks
+- Ratio and Proportion Methods
+- Time and Work Strategies
+- Time Speed Distance Formulas
+- Probability Basic and Advanced
+- Permutations and Combinations
+- Simple and Compound Interest
+- Averages and Weighted Averages
+- Number System Types and Tricks
+- Logical Reasoning Patterns
+- Data Interpretation Techniques
+
+## Search Tags
+- aptitude preparation placements
+- quantitative aptitude formulas
+- profit loss percentage tricks
+- time work shortcuts
+- probability permutations combinations
+- number system aptitude
+- logical reasoning patterns
+- data interpretation techniques
+- placement aptitude rag content
+
+## Closing Note
+This knowledge base is structured for quick revision, formula recall, and problem-solving practice. For placement success, consistent practice, speed improvement, and clear explanation of reasoning are more valuable than memorizing everything.

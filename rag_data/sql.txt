@@ -1,0 +1,744 @@
+# SQL Interview Preparation Knowledge Base
+
+## Document Purpose
+This document is a beginner-to-intermediate SQL interview preparation guide designed as structured knowledge base content for a retrieval-augmented generation system. It focuses on placement interview concepts, practical query thinking, table relationships, and frequently asked theory questions with concise answers. The content is organized so that each section can be indexed and retrieved independently during interview revision.
+
+## Audience and Scope
+- Intended for students preparing for placements, internships, and technical interviews.
+- Suitable for learners who know basic SQL syntax and want stronger concept clarity.
+- Emphasizes interview explanations, not vendor-specific advanced tuning.
+- Uses practical examples close to placement-style questions.
+- Relational databases rely on table definitions, constraints, and transactions to maintain valid and consistent data [1][2].
+
+## How to Use This Knowledge Base
+- Read one topic at a time and revise examples carefully.
+- Practice every query manually in a SQL environment.
+- Try to explain each answer in simple spoken language.
+- Compare similar concepts such as `WHERE` vs `HAVING`, primary key vs unique key, and join types.
+- During interviews, clarity of explanation matters as much as query correctness.
+
+## Sample Schema Used in Examples
+Many examples in this document use the following tables:
+
+```sql
+CREATE TABLE Departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50) NOT NULL,
+    salary DECIMAL(10,2),
+    dept_id INT,
+    manager_id INT,
+    FOREIGN KEY (dept_id) REFERENCES Departments(dept_id)
+);
+
+CREATE TABLE Projects (
+    project_id INT PRIMARY KEY,
+    project_name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES Departments(dept_id)
+);
+```
+
+## 1. Database Basics
+
+### Definition
+A database is an organized collection of data stored so that it can be accessed, managed, and updated efficiently. In SQL interviews, the discussion usually centers on relational databases, where data is stored in tables made of rows and columns.
+
+### Important Terms
+- Table: a structured collection of rows and columns.
+- Row or record: one complete data entry in a table.
+- Column or field: one attribute of the data.
+- DBMS: Database Management System, software used to manage databases.
+- RDBMS: Relational Database Management System, which stores data in related tables.
+- Schema: the logical structure of database objects such as tables, views, and constraints.
+
+### Why SQL Matters in Placement Interviews
+- SQL is used in backend development, analytics, testing, and reporting roles.
+- Interviewers often test both query writing and conceptual understanding.
+- Even when the role is not database-heavy, SQL is often used to evaluate problem-solving.
+- Joins, grouping, subqueries, and normalization are especially common in placement rounds.
+
+### Interview Questions and Answers
+**Q1. What is the difference between DBMS and RDBMS?**  
+A DBMS stores and manages data in general, while an RDBMS specifically stores data in related tables using relational principles.
+
+**Q2. What is SQL?**  
+SQL stands for Structured Query Language. It is used to define, retrieve, update, and control data in relational databases.
+
+**Q3. What are the main categories of SQL commands?**  
+Common categories include DDL such as `CREATE` and `ALTER`, DML such as `INSERT` and `UPDATE`, DQL such as `SELECT`, DCL such as `GRANT`, and TCL such as `COMMIT` and `ROLLBACK`.
+
+## 2. Primary Key
+
+### Definition
+A primary key uniquely identifies each row in a table. PostgreSQL documentation explains that a primary key requires values to be both unique and not null, and only one primary key can be identified per table [1].
+
+### Why It Is Important
+- Prevents duplicate row identity.
+- Ensures every row can be uniquely referenced.
+- Is commonly used as the target of foreign key references [1].
+- Often improves design clarity and application logic.
+
+### Example
+```sql
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50)
+);
+```
+
+### Composite Primary Key
+A primary key can contain more than one column. PostgreSQL documentation notes that primary keys can span multiple columns when a combination of values uniquely identifies a row [1].
+
+```sql
+CREATE TABLE Enrollment (
+    student_id INT,
+    course_id INT,
+    PRIMARY KEY (student_id, course_id)
+);
+```
+
+### Interview Questions and Answers
+**Q1. Can a table have more than one primary key?**  
+No. A table can have only one primary key, though that key may consist of multiple columns [1].
+
+**Q2. Can a primary key contain null values?**  
+No. Primary key columns are always `NOT NULL` [1].
+
+**Q3. Difference between primary key and unique key?**  
+A primary key uniquely identifies rows and does not allow nulls, while a unique key also enforces uniqueness but may allow null behavior depending on the database system [1].
+
+## 3. Foreign Key
+
+### Definition
+A foreign key is a column or group of columns in one table that references a primary key or unique key in another table. PostgreSQL documentation states that a foreign key maintains referential integrity by requiring values in the referencing table to match values in the referenced table [1].
+
+### Example
+```sql
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+```
+
+### Why It Is Important
+- Ensures valid relationships between tables.
+- Prevents orphan records.
+- Supports normalized database design.
+- Helps maintain consistent business data [1].
+
+### Foreign Key Actions
+The documentation describes several `ON DELETE` and `ON UPDATE` behaviors such as `NO ACTION`, `RESTRICT`, `CASCADE`, `SET NULL`, and `SET DEFAULT` [1].
+
+```sql
+CREATE TABLE Order_Items (
+    order_id INT,
+    product_id INT,
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE CASCADE
+);
+```
+
+### Interview Questions and Answers
+**Q1. What is referential integrity?**  
+It means relationships between tables remain valid, so child-table references point to existing parent-table rows [1].
+
+**Q2. What happens if a foreign key references a non-existing value?**  
+The database raises an error because the foreign key constraint is violated [1].
+
+**Q3. Does creating a foreign key automatically create an index?**  
+Not always on the referencing side. PostgreSQL notes that referenced columns must be indexed through a primary key, unique constraint, or suitable unique index, but referencing columns are not automatically indexed [1].
+
+## 4. Constraints
+
+### Definition
+Constraints are rules applied to columns or tables to restrict invalid data. PostgreSQL documentation explains that constraints raise errors when users attempt to store data that violates those rules [1].
+
+### Common Constraints
+- `NOT NULL`: column cannot store null.
+- `UNIQUE`: values must be unique.
+- `PRIMARY KEY`: unique and not null row identifier [1].
+- `FOREIGN KEY`: enforces valid references [1].
+- `CHECK`: enforces a Boolean condition on data [1].
+- `DEFAULT`: assigns a default value when none is provided.
+
+### Example
+```sql
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(50) NOT NULL,
+    price DECIMAL(10,2) CHECK (price > 0),
+    category VARCHAR(30) DEFAULT 'General'
+);
+```
+
+### Why Constraints Matter in Interviews
+- They show understanding of data integrity.
+- They reduce bad data at the database level.
+- They often appear in schema design questions.
+
+### Interview Questions and Answers
+**Q1. What is a `CHECK` constraint?**  
+It ensures a value satisfies a condition, such as `price > 0` [1].
+
+**Q2. Difference between `NOT NULL` and `CHECK`?**  
+`NOT NULL` only prevents null values, while `CHECK` enforces a broader logical condition [1].
+
+**Q3. Why should constraints be enforced in the database instead of only in application code?**  
+Because database-level constraints protect data integrity even if data comes from multiple applications or scripts [1].
+
+## 5. Joins
+
+### Definition
+Joins combine data from two or more tables based on a related column. This is one of the most important SQL interview topics because relational databases store connected data across tables.
+
+### INNER JOIN
+Returns only matching rows from both tables.
+
+```sql
+SELECT e.emp_name, d.dept_name
+FROM Employees e
+INNER JOIN Departments d
+ON e.dept_id = d.dept_id;
+```
+
+### LEFT JOIN
+Returns all rows from the left table and matching rows from the right table. If there is no match, right-side columns become `NULL` [3].
+
+```sql
+SELECT e.emp_name, d.dept_name
+FROM Employees e
+LEFT JOIN Departments d
+ON e.dept_id = d.dept_id;
+```
+
+### RIGHT JOIN
+Returns all rows from the right table and matching rows from the left table. If there is no match, left-side columns become `NULL` [3].
+
+```sql
+SELECT e.emp_name, d.dept_name
+FROM Employees e
+RIGHT JOIN Departments d
+ON e.dept_id = d.dept_id;
+```
+
+### FULL JOIN
+Returns all matching and non-matching rows from both tables. Unmatched portions are filled with `NULL` values [3].
+
+```sql
+SELECT e.emp_name, d.dept_name
+FROM Employees e
+FULL OUTER JOIN Departments d
+ON e.dept_id = d.dept_id;
+```
+
+### Join Summary Table
+| Join Type | Returned Rows |
+|---|---|
+| INNER JOIN | Only matching rows from both tables |
+| LEFT JOIN | All rows from left table, matched rows from right |
+| RIGHT JOIN | All rows from right table, matched rows from left |
+| FULL OUTER JOIN | All rows from both tables, matched where possible |
+
+### Interview Questions and Answers
+**Q1. What is the difference between INNER JOIN and LEFT JOIN?**  
+`INNER JOIN` returns only matching rows, while `LEFT JOIN` returns every row from the left table plus matches from the right [3].
+
+**Q2. When would `FULL OUTER JOIN` be useful?**  
+It is useful when both matched and unmatched records from both tables must be analyzed [3].
+
+**Q3. Can joins be used on columns with different names?**  
+Yes. Join conditions compare values, not necessarily identical column names [3].
+
+## 6. GROUP BY
+
+### Definition
+`GROUP BY` groups rows that have the same values in selected columns so aggregate functions can be applied to each group.
+
+### Example
+```sql
+SELECT dept_id, COUNT(*) AS total_employees
+FROM Employees
+GROUP BY dept_id;
+```
+
+### Common Aggregate Functions
+- `COUNT()`
+- `SUM()`
+- `AVG()`
+- `MIN()`
+- `MAX()`
+
+### Why It Matters
+- Used in reporting and analytics.
+- Very common in placement interview query tasks.
+- Often combined with joins and `HAVING`.
+
+### Interview Questions and Answers
+**Q1. Why do we use `GROUP BY`?**  
+To create groups of rows so aggregate functions can be calculated per group.
+
+**Q2. Can `GROUP BY` be used with joins?**  
+Yes. SQL learners commonly group joined results when summarizing related data across tables [4].
+
+**Q3. What mistake do beginners often make with `GROUP BY`?**  
+They select non-aggregated columns that are not included in the `GROUP BY` clause.
+
+## 7. HAVING
+
+### Definition
+The `HAVING` clause filters grouped results after aggregation. W3Schools explains that unlike `WHERE`, which filters rows before grouping, `HAVING` filters groups after aggregation has been performed [5].
+
+### Example
+```sql
+SELECT dept_id, COUNT(*) AS total_employees
+FROM Employees
+GROUP BY dept_id
+HAVING COUNT(*) > 5;
+```
+
+### `WHERE` vs `HAVING`
+- `WHERE` filters rows before grouping.
+- `HAVING` filters groups after grouping [5][3].
+
+### Interview Questions and Answers
+**Q1. Can aggregate functions be used in `WHERE`?**  
+Usually no for grouped filtering; grouped aggregate conditions are placed in `HAVING` [5].
+
+**Q2. Give a case where `HAVING` is necessary.**  
+When filtering departments whose average salary is greater than a threshold.
+
+**Q3. Is `HAVING` only used with `GROUP BY`?**  
+It is mainly used for grouped conditions, and in interviews it is usually discussed together with `GROUP BY` [5].
+
+## 8. Subqueries
+
+### Definition
+A subquery is a query written inside another query. It can appear in `SELECT`, `FROM`, `WHERE`, or `HAVING` clauses.
+
+### Example in `WHERE`
+```sql
+SELECT emp_name, salary
+FROM Employees
+WHERE salary > (
+    SELECT AVG(salary) FROM Employees
+);
+```
+
+### Example in `FROM`
+```sql
+SELECT dept_id, avg_salary
+FROM (
+    SELECT dept_id, AVG(salary) AS avg_salary
+    FROM Employees
+    GROUP BY dept_id
+) AS dept_summary;
+```
+
+### Types of Subqueries
+- Single-row subquery
+- Multiple-row subquery
+- Correlated subquery
+- Nested subquery
+
+### Correlated Subquery Example
+```sql
+SELECT e1.emp_name, e1.salary
+FROM Employees e1
+WHERE e1.salary > (
+    SELECT AVG(e2.salary)
+    FROM Employees e2
+    WHERE e1.dept_id = e2.dept_id
+);
+```
+
+### Interview Questions and Answers
+**Q1. What is a correlated subquery?**  
+A correlated subquery depends on values from the outer query and runs once per relevant outer row.
+
+**Q2. Difference between subquery and join?**  
+Both can solve related problems, but joins are often used to combine tables directly, while subqueries are useful when one query depends on the result of another.
+
+**Q3. Are subqueries slower than joins?**  
+Not always. Performance depends on the database optimizer, schema, indexes, and query structure.
+
+## 9. Views
+
+### Definition
+A view is a virtual table based on the result of a SQL query. It stores the query definition rather than storing data separately in most common cases.
+
+### Example
+```sql
+CREATE VIEW HighSalaryEmployees AS
+SELECT emp_id, emp_name, salary
+FROM Employees
+WHERE salary > 50000;
+```
+
+### Why Views Are Useful
+- Simplify complex queries.
+- Improve readability.
+- Restrict access to selected columns or rows.
+- Help present business-friendly data.
+
+### Interview Questions and Answers
+**Q1. Does a view always store data physically?**  
+Not usually. A normal view stores the query definition, while materialized views in some systems store data physically.
+
+**Q2. Why use a view in interviews or projects?**  
+To simplify repeated query logic and provide an abstraction layer over base tables.
+
+**Q3. Can we update data through a view?**  
+Sometimes yes, but it depends on the database system and the complexity of the view.
+
+## 10. Indexes
+
+### Definition
+An index is a database object that improves data retrieval speed, especially for frequent search, join, and sort operations.
+
+### Key Idea
+Indexes improve read performance but usually add overhead to inserts, updates, and deletes because the index must also be maintained.
+
+### Important Notes
+- PostgreSQL automatically creates a unique B-tree index for `PRIMARY KEY` and `UNIQUE` constraints [1].
+- Foreign key declarations do not automatically create an index on the referencing columns [1].
+
+### Example
+```sql
+CREATE INDEX idx_employee_name
+ON Employees(emp_name);
+```
+
+### Interview Questions and Answers
+**Q1. Why are indexes useful?**  
+They reduce the amount of scanning needed to locate data.
+
+**Q2. What is the disadvantage of too many indexes?**  
+Write operations become slower and storage usage increases.
+
+**Q3. Are indexes automatically created for primary keys?**  
+Yes. PostgreSQL documentation states that adding a primary key automatically creates a unique B-tree index [1].
+
+## 11. Normalization
+
+### Definition
+Normalization is the process of organizing data to reduce redundancy and improve consistency.
+
+### Goals
+- Eliminate unnecessary duplication.
+- Reduce update anomalies.
+- Improve logical design.
+- Separate data into well-structured related tables.
+
+### Common Normal Forms
+- First Normal Form (1NF): atomic values, no repeating groups.
+- Second Normal Form (2NF): in 1NF and no partial dependency on a composite key.
+- Third Normal Form (3NF): in 2NF and no transitive dependency.
+- BCNF: stricter version of 3NF based on candidate keys.
+
+### Example
+Instead of storing department details repeatedly in every employee row, a normalized design separates `Departments` and references it through `dept_id`.
+
+### Interview Questions and Answers
+**Q1. Why is normalization important?**  
+It reduces redundancy and helps maintain data consistency.
+
+**Q2. What is denormalization?**  
+Denormalization intentionally adds redundancy to improve read performance or simplify reporting.
+
+**Q3. Is normalization always the best choice?**  
+It is a strong default for transactional systems, but real systems sometimes denormalize for performance.
+
+## 12. Stored Procedures
+
+### Definition
+A stored procedure is a set of SQL statements stored in the database and executed as a unit. Different database systems use different syntax, but the core idea is the same.
+
+### Why Stored Procedures Are Used
+- Reuse business logic.
+- Reduce application-side repetition.
+- Centralize database operations.
+- Improve maintainability in some enterprise systems.
+
+### Example
+```sql
+CREATE PROCEDURE GetEmployeesByDept(IN dept INT)
+BEGIN
+    SELECT * FROM Employees WHERE dept_id = dept;
+END;
+```
+
+### Interview Questions and Answers
+**Q1. What is the difference between a stored procedure and a function?**  
+A stored procedure usually performs actions and may or may not return values, while a function typically returns a value.
+
+**Q2. Why are stored procedures asked in interviews?**  
+Because they test understanding of reusable logic inside the database.
+
+**Q3. Are stored procedures portable across all databases?**  
+No. Syntax and capabilities differ between systems such as MySQL, SQL Server, Oracle, and PostgreSQL.
+
+## 13. Triggers
+
+### Definition
+A trigger is a database object that automatically executes when a specific event such as `INSERT`, `UPDATE`, or `DELETE` occurs on a table.
+
+### Use Cases
+- Audit logging
+- Validation
+- Automatic field updates
+- Enforcing additional business rules
+
+### Example
+```sql
+CREATE TRIGGER update_timestamp
+BEFORE UPDATE ON Employees
+FOR EACH ROW
+BEGIN
+    SET NEW.last_modified = CURRENT_TIMESTAMP;
+END;
+```
+
+### Constraint-Related Note
+PostgreSQL documentation states that firing of triggers declared as constraint triggers is controlled by constraint timing settings [2].
+
+### Interview Questions and Answers
+**Q1. What is the difference between a trigger and a stored procedure?**  
+A trigger runs automatically on database events, while a stored procedure is invoked explicitly.
+
+**Q2. Why should triggers be used carefully?**  
+Because hidden automatic behavior can make debugging and performance analysis harder.
+
+**Q3. When are triggers useful?**  
+They are useful for auditing, automatic validation, and event-based logic inside the database.
+
+## 14. Transactions
+
+### Definition
+A transaction is a sequence of one or more database operations treated as a single unit of work. Transaction reliability is generally described using ACID properties [6][7].
+
+### Common Transaction Commands
+- `BEGIN` or `START TRANSACTION`
+- `COMMIT`
+- `ROLLBACK`
+- `SAVEPOINT`
+
+### Example
+```sql
+BEGIN;
+UPDATE Accounts SET balance = balance - 1000 WHERE account_id = 1;
+UPDATE Accounts SET balance = balance + 1000 WHERE account_id = 2;
+COMMIT;
+```
+
+### Why Transactions Matter
+- Prevent partial updates.
+- Maintain consistency during multi-step operations.
+- Essential in banking, ordering, and inventory systems.
+
+### Interview Questions and Answers
+**Q1. What happens if one step in a transaction fails?**  
+The transaction can be rolled back so partial changes are not permanently applied [7].
+
+**Q2. What is `ROLLBACK`?**  
+It undoes changes made in the current transaction before commit.
+
+**Q3. What is a savepoint?**  
+A savepoint marks an intermediate point inside a transaction to support partial rollback.
+
+## 15. ACID Properties
+
+### Definition
+ACID stands for Atomicity, Consistency, Isolation, and Durability. These properties describe how reliable database transactions behave [6][7][8].
+
+### Atomicity
+A transaction is treated as a single unit that either fully succeeds or fully fails [7][8].
+
+### Consistency
+A transaction moves the database from one valid state to another valid state while respecting rules and constraints [7][1].
+
+### Isolation
+Concurrent transactions should not interfere in a way that exposes inconsistent intermediate states [7][8].
+
+### Durability
+Once a transaction is committed, its effects remain permanent even after failures such as crashes [7][8].
+
+### Interview Questions and Answers
+**Q1. Which ACID property prevents half-completed work?**  
+Atomicity [7].
+
+**Q2. Which ACID property is most related to concurrent execution?**  
+Isolation [7][8].
+
+**Q3. Which property ensures committed data survives failures?**  
+Durability [7][8].
+
+## 16. Frequently Asked SQL Interview Questions
+
+### Q1. Difference between `WHERE` and `HAVING`?
+- `WHERE` filters individual rows before grouping.
+- `HAVING` filters grouped results after aggregation [5][3].
+
+### Q2. Difference between `DELETE`, `TRUNCATE`, and `DROP`?
+- `DELETE` removes selected rows.
+- `TRUNCATE` removes all rows quickly from a table structure.
+- `DROP` removes the entire table structure and data.
+
+### Q3. What is the difference between `CHAR` and `VARCHAR`?
+- `CHAR` is fixed length.
+- `VARCHAR` is variable length.
+
+### Q4. What is a candidate key?
+A candidate key is a column or combination of columns that can uniquely identify a row.
+
+### Q5. What is a composite key?
+A composite key uses more than one column together to identify a row.
+
+### Q6. What is a self join?
+A self join joins a table with itself, often for hierarchy problems such as employee-manager relationships.
+
+```sql
+SELECT e.emp_name AS employee, m.emp_name AS manager
+FROM Employees e
+LEFT JOIN Employees m
+ON e.manager_id = m.emp_id;
+```
+
+### Q7. What is the difference between `UNION` and `UNION ALL`?
+- `UNION` removes duplicates.
+- `UNION ALL` keeps duplicates and is often faster.
+
+### Q8. What are aggregate functions?
+Aggregate functions compute a single result from multiple rows, such as `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX`.
+
+### Q9. What is the purpose of aliases?
+Aliases provide temporary names to tables or columns and improve readability.
+
+### Q10. Why are joins more important than memorizing syntax?**
+Because many interview questions test data relationships, multi-table reasoning, and result interpretation rather than basic syntax alone.
+
+## Practical Placement Questions with Sample Answers
+
+### 1. Find the second highest salary
+```sql
+SELECT MAX(salary) AS second_highest
+FROM Employees
+WHERE salary < (SELECT MAX(salary) FROM Employees);
+```
+
+### 2. Find duplicate names
+```sql
+SELECT emp_name, COUNT(*)
+FROM Employees
+GROUP BY emp_name
+HAVING COUNT(*) > 1;
+```
+
+### 3. Count employees in each department
+```sql
+SELECT dept_id, COUNT(*) AS total
+FROM Employees
+GROUP BY dept_id;
+```
+
+### 4. Find employees earning above department average
+```sql
+SELECT e1.emp_name, e1.salary, e1.dept_id
+FROM Employees e1
+WHERE e1.salary > (
+    SELECT AVG(e2.salary)
+    FROM Employees e2
+    WHERE e1.dept_id = e2.dept_id
+);
+```
+
+### 5. List departments with no employees
+```sql
+SELECT d.dept_name
+FROM Departments d
+LEFT JOIN Employees e
+ON d.dept_id = e.dept_id
+WHERE e.emp_id IS NULL;
+```
+
+### 6. Find total salary by department and show only departments above 100000
+```sql
+SELECT dept_id, SUM(salary) AS total_salary
+FROM Employees
+GROUP BY dept_id
+HAVING SUM(salary) > 100000;
+```
+
+### 7. Show employee and department names together
+```sql
+SELECT e.emp_name, d.dept_name
+FROM Employees e
+INNER JOIN Departments d
+ON e.dept_id = d.dept_id;
+```
+
+## Common Interview Mistakes
+- Confusing `WHERE` and `HAVING`.
+- Forgetting join conditions, leading to incorrect results.
+- Not handling `NULL` values correctly.
+- Using `GROUP BY` improperly with selected columns.
+- Forgetting that primary keys cannot be null [1].
+- Assuming every foreign key column is indexed automatically [1].
+- Writing a correct query but failing to explain it clearly.
+
+## Quick Revision Notes
+- A primary key uniquely identifies rows and cannot be null [1].
+- A foreign key enforces valid references between tables [1].
+- Constraints protect data integrity by rejecting invalid data [1].
+- `INNER JOIN` returns matching rows, while outer joins preserve unmatched rows from one or both sides [3].
+- `GROUP BY` is used with aggregate functions.
+- `HAVING` filters grouped results after aggregation [5].
+- Subqueries can appear inside `SELECT`, `FROM`, `WHERE`, or `HAVING`.
+- Views simplify repeated query logic.
+- Indexes improve retrieval speed but add write overhead.
+- Normalization reduces redundancy.
+- Stored procedures and triggers bring logic closer to the database.
+- Transactions protect multi-step operations [7].
+- ACID explains transaction reliability [6][7].
+
+## Placement Interview Strategy
+- Clarify assumptions before writing a query.
+- Start with a simple solution and optimize later.
+- Explain why a join, subquery, or grouping is needed.
+- Mention edge cases such as nulls, duplicates, and missing matches.
+- If asked theory, compare similar concepts directly.
+- If asked coding, explain expected output before finishing the query.
+
+## RAG-Friendly Chunking Suggestions
+The following chunk boundaries work well for indexing in a vector database:
+- Database Basics and SQL Command Categories
+- Primary Key and Unique Identification
+- Foreign Key and Referential Integrity
+- Constraints and Data Validation
+- SQL Join Types and Multi-table Queries
+- GROUP BY and Aggregation
+- HAVING and Post-Aggregation Filtering
+- Subqueries and Correlated Queries
+- Views and Query Abstraction
+- Indexes and Performance Basics
+- Normalization and Schema Design
+- Stored Procedures and Triggers
+- Transactions and ACID Properties
+- Placement SQL Questions and Answers
+
+## Search Tags
+- sql interview questions
+- sql placement preparation
+- sql joins group by having
+- sql primary key foreign key
+- sql normalization basics
+- sql transactions acid
+- beginner sql knowledge base
+- sql rag content
+
+## Closing Note
+This knowledge base is structured for both direct study and semantic retrieval. In SQL placement interviews, understanding data relationships, writing correct queries, and explaining trade-offs clearly are often more important than memorizing every command.
