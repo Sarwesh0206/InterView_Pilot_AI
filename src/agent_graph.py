@@ -181,10 +181,12 @@ graph.add_edge(
     "report_agent"
 )
 
+
 graph.add_edge(
     "interview_agent",
     "report_agent"
 )
+
 
 graph.add_edge(
     "career_agent",

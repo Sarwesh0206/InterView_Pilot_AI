@@ -47,7 +47,7 @@ if css_path.exists():
             f"<style>{f.read()}</style>",
             unsafe_allow_html=True
         )
-
+###GROQ ERROR HANDLING FUNCTION
 # HELPER FUNCTION FOR GROQ ERROR UI HANDLING
 def handle_groq_exception(e):
     """Displays user-friendly error messages based on the Groq exception type."""
